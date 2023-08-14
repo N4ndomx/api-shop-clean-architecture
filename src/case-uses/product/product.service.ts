@@ -11,10 +11,12 @@ export class ProductService {
   ) { }
   async create(createProductDto: CreateProductDto) {
     const product = new Product();
-    product.id = createProductDto.id
+    // product.id = createProductDto.id
     product.name = createProductDto.name
     product.price = createProductDto.price
     product.stock = createProductDto.stock
+    product.descripcion = createProductDto.descripcion
+    // product.tags = createProductDto.tagss
 
     return await this.dataService.products.save(product);
   }
