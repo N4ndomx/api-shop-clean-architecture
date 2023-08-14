@@ -1,5 +1,4 @@
 import { GenericRepository } from "src/core/abstract/generic-repository.interface";
-import { Product } from "src/core/entities/product.entity";
 
 export class LocalStorageRepository<T> implements GenericRepository<T>{
     data: T[] = []
